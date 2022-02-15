@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    margin: 0
+}
+
+main {
+    background-color: #2D2D2D;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    padding: 100px 0 275px 0;
+
+}
+
+p {
+    margin: 0;
+}
+
+.logo {
+    width: 160px;
+    height: 61px;
+    margin: 0 0 60px 0;
+}
+
+.botoes {
+    margin-bottom: 45px;
+}
+
+.botaoIntroducao, .botaoContato {
+    background: linear-gradient(0deg, rgba(224, 90, 77, 1) 5%, rgba(234, 145, 107, 1) 100%);
+    width: 200px;
+    margin: 0 8.5px;
+    box-shadow: 0 5px 10px 0px black;
+    height: 40px;
+    font-size: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+    color: #ffffff;
+}
+
+.botaoIntroducao:hover, .botaoContato:hover {
+    opacity: 0.8;
+}
+
+.introducao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.introducaoTexto, .contatoTexto {
+    font-size: 22px;
+    color: white;
+    position: relative;
+    margin-bottom: 37px;
+}
+
+.introducaoTexto:after, .contatoTexto:after {
+    content: "";
+    border-bottom: solid 2px #707070;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 32px;
+}
+
+.introducaoTexto:before {
+    content: "";
+    background: linear-gradient(0deg, rgba(224, 90, 77, 1) 5%, rgba(234, 145, 107, 1) 100%);
+    width: 20px;
+    height: 6px;
+    position: absolute;
+    top: 29px;
+    left: 52px;
+    z-index: 1;
+}
+
+.conteudoIntroducao {
+    max-width: 780px;
+    border-radius: 10px;
+    height: 435px;
+    color: white;
+    padding: 40px;
+    margin: 0 20px;
+    box-shadow: 0 10px 20px 0px black;
+    font-size: 15px;
+    line-height: 24px;
+    background-color: #EA916B;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conteudoIntroducao p:first-child {
+    padding-bottom: 20px;
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 0 20px;
+}
+
+.contatoTexto:before {
+    content: "";
+    background: linear-gradient(0deg, rgba(224, 90, 77, 1) 5%, rgba(234, 145, 107, 1) 100%);
+    width: 20px;
+    height: 6px;
+    position: absolute;
+    top: 29px;
+    left: 35px;
+    z-index: 1;
+}
+
+.conteudoContato {
+    max-width: 680px;
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    color: white;
+    padding: 40px 40px 0 40px;
+    box-shadow: 0 10px 20px 0px black;
+    font-size: 15px;
+    background-color: #EA916B;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conteudoContato input::placeholder, .mensagem textarea::placeholder {
+    color: #999999
+}
+
+.nomeEmail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nomeEmail>input {
+    width: 291px;
+    height: 46px;
+    border: none;
+    font-size: 13px;
+    padding: 15px 0 15px 20px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+}
+
+.mensagem textarea {
+    width: 600px;
+    height: 200px;
+    padding: 15px 0 0 20px;
+    border: none;
+    position: relative;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+
+
+.enviar {
+    display: flex;
+    justify-content: center;
+    margin: 22px 0 40px 0;
+}
+
+.enviar input {
+    width: 160px;
+    height: 40px;
+    border: none;
+    box-shadow: 0 5px 10px black;
+    background-color: #373735;
+    color: white;
+    font-size: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.enviar input:hover {
+    opacity: 0.9;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+}
+
+.none {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .conteudoIntroducao {
+        height: auto;
+    }
+
+    .botoes {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .botoes button:first-child {
+        margin-bottom: 20px;
+    }
+
+    .conteudoIntroducao, .conteudoContato {
+        padding: 20px;
+    }
+
+    .conteudoContato {
+        height: 100%;
+    }
+
+    .nomeEmail {
+        flex-direction: column;
+    }
+
+    .nomeEmail>input, .mensagem textarea {
+        width: 100%;
+    }
+}
